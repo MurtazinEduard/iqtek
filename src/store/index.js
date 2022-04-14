@@ -79,6 +79,8 @@ export default createStore({
       state.showDialog = false;
       state.currentId = "";
       state.currentName = "";
+      localStorage.currentId = "";
+      localStorage.currentName = "";
     },
     saveSearchQuery(state, query) {
       state.searchQuery = query;

@@ -56,6 +56,7 @@ export default {
     changeOldUser() {
       if (this.currentId && this.currentName) {
         this.saveOldUserChanges();
+        localStorage.usersData = JSON.stringify(this.usersData);
       }
     },
   },
