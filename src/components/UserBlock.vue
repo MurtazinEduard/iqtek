@@ -34,8 +34,6 @@ export default {
     },
     changeUser(user) {
       this.editUser(user);
-      console.log(user);
-      console.log(this.currentUser)
       localStorage.usersData = JSON.stringify(this.usersData)
     },
   },

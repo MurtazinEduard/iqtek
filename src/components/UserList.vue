@@ -47,19 +47,15 @@ export default {
     ...mapMutations(["addNewId", "addNewName", "saveOldUserChanges"]),
     updateValueId(e) {
       this.addNewId(e);
-      localStorage.currentId = JSON.stringify(this.currentId)
-      console.log(this.currentId);
+      localStorage.currentId = JSON.stringify(this.currentId);
     },
     updateValueName(e) {
       this.addNewName(e);
-      localStorage.currentName = JSON.stringify(this.currentName)
-      console.log(this.currentName);
-      
+      localStorage.currentName = JSON.stringify(this.currentName);
     },
     changeOldUser() {
       if (this.currentId && this.currentName) {
         this.saveOldUserChanges();
-        
       }
     },
   },
@@ -68,10 +64,18 @@ export default {
   },
   computed: {
     ...mapActions([]),
-    ...mapState(["usersData", "showDialog", "currentId", "currentName", "searchQuery"]),
+    ...mapState([
+      "usersData",
+      "showDialog",
+      "currentId",
+      "currentName",
+      "searchQuery",
+    ]),
     searchedUsersData() {
-      return this.usersData.filter((user => user.name.toLowerCase().includes(this.searchQuery.toLowerCase())))
-    }
+      return this.usersData.filter((user) =>
+        user.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    },
   },
 };
 </script>

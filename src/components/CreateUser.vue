@@ -29,24 +29,21 @@ export default {
     ...mapMutations(["addNewId", "addNewName", "addNewUser"]),
     updateValueId(e) {
       this.addNewId(e);
-      
-      localStorage.currentId = JSON.stringify(this.currentId)
-      console.log(this.currentId)
+      localStorage.currentId = JSON.stringify(this.currentId);
     },
     updateValueName(e) {
       this.addNewName(e);
-      localStorage.currentName = JSON.stringify(this.currentName)
-      console.log(this.currentName)
+      localStorage.currentName = JSON.stringify(this.currentName);
     },
     createNewUser() {
       if (this.currentId && this.currentName) {
         this.addNewUser();
-        localStorage.usersData = JSON.stringify(this.usersData)
+        localStorage.usersData = JSON.stringify(this.usersData);
       }
     },
   },
   computed: {
-    ...mapState(["currentId", "currentName", 'usersData']),
+    ...mapState(["currentId", "currentName", "usersData"]),
   },
   data() {
     return {};

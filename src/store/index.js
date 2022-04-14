@@ -40,7 +40,7 @@ export default createStore({
     currentName: "",
     showDialog: false,
     currentUser: "",
-    searchQuery: ''
+    searchQuery: "",
   }),
   getters: {},
   mutations: {
@@ -60,6 +60,8 @@ export default createStore({
       state.usersData.push(newUser);
       state.currentId = "";
       state.currentName = "";
+      localStorage.currentId = "";
+      localStorage.currentName = "";
     },
     deleteUser(state, usersData) {
       state.usersData = usersData;
@@ -79,19 +81,19 @@ export default createStore({
       state.currentName = "";
     },
     saveSearchQuery(state, query) {
-      state.searchQuery = query
+      state.searchQuery = query;
     },
     hideDialogWindow(state) {
-      state.showDialog = false
+      state.showDialog = false;
     },
     setUsersFromLocalStorage(state, users) {
-      state.usersData = JSON.parse(users)
+      state.usersData = JSON.parse(users);
     },
     setCurrentIdFromLocalStorage(state, id) {
-      state.currentId = JSON.parse(id)
+      state.currentId = JSON.parse(id);
     },
     setCurrentNameFromLocalStorage(state, name) {
-      state.currentName = JSON.parse(name)
+      state.currentName = JSON.parse(name);
     },
   },
   actions: {},

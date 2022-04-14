@@ -44,7 +44,6 @@ export default {
     ...mapState(["searchQuery", "usersData"]),
   },
   mounted() {
-    console.log(this.usersData);
     if (localStorage.usersData) {
       this.setUsersFromLocalStorage(localStorage.usersData);
     }
