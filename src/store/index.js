@@ -9,32 +9,20 @@ export default createStore({
       },
       {
         id: 2,
-        name: "Edward",
+        name: "Sonya",
       },
       {
         id: 3,
-        name: "Edward",
+        name: "Katya",
       },
       {
         id: 4,
-        name: "Edward",
+        name: "Anonim",
       },
       {
         id: 5,
-        name: "Edward",
-      },
-      {
-        id: 6,
-        name: "Edward",
-      },
-      {
-        id: 7,
-        name: "Edward",
-      },
-      {
-        id: 8,
-        name: "Edward",
-      },
+        name: "Valera",
+      }
     ],
     currentId: "",
     currentName: "",
